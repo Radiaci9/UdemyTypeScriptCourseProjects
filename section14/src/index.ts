@@ -1,8 +1,12 @@
 import bodyParser from 'body-parser';
 import cookieSession from 'cookie-session';
-import express, {Request, Response} from 'express';
+import express from 'express';
 
-import { router } from './loginRoutes';
+import './controllers/LoginController';
+import './controllers/RootController';
+import AppRouter from './AppRouter';
+
+const router = AppRouter.getInstance();
 
 const PORT = 3000;
 
